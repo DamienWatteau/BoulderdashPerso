@@ -53,8 +53,8 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
 	public final void play() throws InterruptedException {
 
 		int kase = 0;
-		int[] tabX = new int[50];
-		int[] tabY = new int[50];
+		int[] tabX = new int[10];
+		int[] tabY = new int[10];
 		int test = 0;
 
 		int score = 0;
@@ -106,7 +106,7 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
 				y = this.getModel().getMyRockford().getY();
 
 				test = 0;
-				for (int i = 0; i < 5; i++) {
+				for (int i = 0; i < 10; i++) {
 
 					if (x == tabX[i] && y == tabY[i]) {
 
