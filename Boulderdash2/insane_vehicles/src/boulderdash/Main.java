@@ -44,7 +44,7 @@ public abstract class Main {
   	   	level = menu.menuLevel();
   	   	
 		final IBoulderdashModel model = new BoulderdashModel(level, startX, startY);
-		final BoulderdashView view = new BoulderdashView(model.getRoad(), model.getMyVehicle());
+		final BoulderdashView view = new BoulderdashView(model.getRoad(), model.getMyRockford());
 		final IBoulderdashController controller = new BoulderdashController(view, model);
 		view.setOrderPerformer(controller.getOrderPeformer());
 		

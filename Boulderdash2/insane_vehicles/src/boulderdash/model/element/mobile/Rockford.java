@@ -2,7 +2,7 @@ package boulderdash.model.element.mobile;
 
 import java.io.IOException;
 
-import boulderdash.model.IRoad;
+import boulderdash.model.IMap;
 import boulderdash.model.element.Permeability;
 import boulderdash.model.element.Sprite;
 
@@ -45,7 +45,7 @@ public class Rockford extends Mobile {
      * @throws IOException
      *             Signals that an I/O exception has occurred.
      */
-    public Rockford(final int x, final int y, final IRoad road) throws IOException {
+    public Rockford(final int x, final int y, final IMap road) throws IOException {
         super(x, y, sprite, road, Permeability.PENETRABLE); // BLOCKING 
         spriteTurnLeft.loadImage();
         spriteTurnRight.loadImage();

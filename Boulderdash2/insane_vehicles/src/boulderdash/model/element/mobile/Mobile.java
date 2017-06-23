@@ -2,7 +2,7 @@ package boulderdash.model.element.mobile;
 
 import java.awt.Point;
 
-import boulderdash.model.IRoad;
+import boulderdash.model.IMap;
 import boulderdash.model.element.Element;
 import boulderdash.model.element.IElement;
 import boulderdash.model.element.Permeability;
@@ -29,7 +29,7 @@ abstract class Mobile extends Element implements IMobile {
     private Boolean alive = true;
 
     /** The road. */
-    private IRoad   road;
+    private IMap map;
 
     /** The board. */
     private IBoard  board;
@@ -44,9 +44,9 @@ abstract class Mobile extends Element implements IMobile {
      * @param permeability
      *            the permeability
      */
-    Mobile(final Sprite sprite, final IRoad road, final Permeability permeability) {
+    Mobile(final Sprite sprite, final IMap map, final Permeability permeability) {
         super(sprite, permeability);
-        this.setRoad(road);
+        this.setRoad(map);
         this.position = new Point();
     }
 
@@ -64,8 +64,8 @@ abstract class Mobile extends Element implements IMobile {
      * @param permeability
      *            the permeability
      */
-    Mobile(final int x, final int y, final Sprite sprite, final IRoad road, final Permeability permeability) {
-        this(sprite, road, permeability);
+    Mobile(final int x, final int y, final Sprite sprite, final IMap map, final Permeability permeability) {
+        this(sprite, map, permeability);
         this.setX(x);
         this.setY(y);
     }
@@ -99,10 +99,10 @@ abstract class Mobile extends Element implements IMobile {
         this.setY(this.getY() + 1);
         this.setHasMoved();
         
-        if(this.getRoad().getOnTheRoadXY(this.getX(), this.getY()).getPermeability()==Permeability.DISAPPEAR){
+        if(this.getMap().getOnTheMapXY(this.getX(), this.getY()).getPermeability()==Permeability.DISAPPEAR){
 //        	this.getRoad().getOnTheRoadXY(this.getX(), this.getY()).setSprite(MotionlessElementsFactory.getDiamond().getSprite());
         	
-        	 IElement audessus = this.getRoad().getOnTheRoadXY(this.getX(),this.getY());
+        	 IElement audessus = this.getMap().getOnTheMapXY(this.getX(),this.getY());
 //             audessus = new Diamond();
              audessus.setSprite(MotionlessElementsFactory.getDiamond().getSprite());
              
@@ -133,7 +133,7 @@ abstract class Mobile extends Element implements IMobile {
      * Sets the has moved.
      */
     private void setHasMoved() {
-        this.getRoad().setMobileHasChanged();
+        this.getMap().setMobileHasChanged();
     }
 
     /*
@@ -175,7 +175,7 @@ abstract class Mobile extends Element implements IMobile {
      *            based on the road height.
      */
     public final void setY(final int y) {
-        this.getPosition().y = (y + this.getRoad().getHeight()) % this.getRoad().getHeight();
+        this.getPosition().y = (y + this.getMap().getHeight()) % this.getMap().getHeight();
         if (this.isCrashed()) {
             this.die();
         }
@@ -186,8 +186,8 @@ abstract class Mobile extends Element implements IMobile {
      *
      * @return the road
      */
-    public IRoad getRoad() {
-        return this.road;
+    public IMap getMap() {
+        return this.map;
     }
 
     /**
@@ -196,8 +196,8 @@ abstract class Mobile extends Element implements IMobile {
      * @param road
      *            the new road
      */
-    private void setRoad(final IRoad road) {
-        this.road = road;
+    private void setRoad(final IMap map) {
+        this.map = map;
     }
 
     /*
@@ -223,21 +223,21 @@ abstract class Mobile extends Element implements IMobile {
      */
     @Override
     public Boolean isCrashed() {
-        return this.getRoad().getOnTheRoadXY(this.getX(), this.getY()).getPermeability() == Permeability.KILLING;
+        return this.getMap().getOnTheMapXY(this.getX(), this.getY()).getPermeability() == Permeability.KILLING;
     }
     
     public Boolean isWon() {
-        return this.getRoad().getOnTheRoadXY(this.getX(), this.getY()).getPermeability() == Permeability.WIN;
+        return this.getMap().getOnTheMapXY(this.getX(), this.getY()).getPermeability() == Permeability.WIN;
     }
     
     public Boolean isBlocked() {
-        return this.getRoad().getOnTheRoadXY(this.getX(), this.getY()).getPermeability() == Permeability.BLOCKING;
+        return this.getMap().getOnTheMapXY(this.getX(), this.getY()).getPermeability() == Permeability.BLOCKING;
     }
     public Boolean isLootable() {
-        return this.getRoad().getOnTheRoadXY(this.getX(), this.getY()).getPermeability() == Permeability.LOOTABLE;
+        return this.getMap().getOnTheMapXY(this.getX(), this.getY()).getPermeability() == Permeability.LOOTABLE;
     }
     public Boolean isDesappear() {
-        return this.getRoad().getOnTheRoadXY(this.getX(), this.getY()).getPermeability() == Permeability.DISAPPEAR;
+        return this.getMap().getOnTheMapXY(this.getX(), this.getY()).getPermeability() == Permeability.DISAPPEAR;
     }
     
     

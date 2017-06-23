@@ -15,7 +15,7 @@ import boulderdash.model.element.mobile.Rockford;
 public class BoulderdashModel implements IBoulderdashModel {
 
     /** The road. */
-    private IRoad   road;
+    private IMap   map;
 
     /** The my vehicle. */
     private IMobile myVehicle;
@@ -34,7 +34,7 @@ public class BoulderdashModel implements IBoulderdashModel {
      */
     public BoulderdashModel(final String fileName, final int myVehicleStartX, final int myVehicleStartY)
             throws IOException {
-        this.setRoad(new Road(fileName));
+        this.setRoad(new Map(fileName));
         this.setMyVehicle(new Rockford(myVehicleStartX, myVehicleStartY, this.getRoad()));
     }
 
@@ -42,8 +42,8 @@ public class BoulderdashModel implements IBoulderdashModel {
      * @see fr.exia.insanevehicles.model.IInsaneVehiclesModel#getRoad()
      */
     @Override
-    public final IRoad getRoad() {
-        return this.road;
+    public final IMap getRoad() {
+        return this.map;
     }
 
     /**
@@ -52,15 +52,15 @@ public class BoulderdashModel implements IBoulderdashModel {
      * @param road
      *            the road to set
      */
-    private void setRoad(final IRoad road) {
-        this.road = road;
+    private void setRoad(final IMap map) {
+        this.map = map;
     }
 
     /* (non-Javadoc)
      * @see fr.exia.insanevehicles.model.IInsaneVehiclesModel#getMyVehicle()
      */
     @Override
-    public final IMobile getMyVehicle() {
+    public final IMobile getMyRockford() {
         return this.myVehicle;
     }
 

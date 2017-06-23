@@ -16,13 +16,13 @@ public interface IBoulderdashModel {
      *
      * @return the road
      */
-    IRoad getRoad();
+    IMap getRoad();
 
     /**
      * Gets the my vehicle.
      *
      * @return the myVehicle
      */
-    IMobile getMyVehicle();
+    IMobile getMyRockford();
 
 }

@@ -52,46 +52,46 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
     @Override
     public final void play() throws InterruptedException {
         int score = 0;
-        while (this.getModel().getMyVehicle().isAlive()) {
+        while (this.getModel().getMyRockford().isAlive()) {
             Thread.sleep(speed);
             switch (this.getStackOrder()) {
             case RIGHT:
-                this.getModel().getMyVehicle().moveRight();
-                if (this.getModel().getMyVehicle().isBlocked() == true) {
-                    this.getModel().getMyVehicle().moveLeft();
+                this.getModel().getMyRockford().moveRight();
+                if (this.getModel().getMyRockford().isBlocked() == true) {
+                    this.getModel().getMyRockford().moveLeft();
                 }
                 break;
             case LEFT:
-                this.getModel().getMyVehicle().moveLeft();
-                if (this.getModel().getMyVehicle().isBlocked() == true) {
-                    this.getModel().getMyVehicle().moveRight();
+                this.getModel().getMyRockford().moveLeft();
+                if (this.getModel().getMyRockford().isBlocked() == true) {
+                    this.getModel().getMyRockford().moveRight();
                 }
                 break;
             case UP:
-                this.getModel().getMyVehicle().moveUp();
-                if (this.getModel().getMyVehicle().isBlocked() == true) {
-                    this.getModel().getMyVehicle().moveDown();
+                this.getModel().getMyRockford().moveUp();
+                if (this.getModel().getMyRockford().isBlocked() == true) {
+                    this.getModel().getMyRockford().moveDown();
                 }
                 break;
             case DOWN:
-                this.getModel().getMyVehicle().moveDown();
-                if (this.getModel().getMyVehicle().isBlocked() == true) {
-                    this.getModel().getMyVehicle().moveUp();
+                this.getModel().getMyRockford().moveDown();
+                if (this.getModel().getMyRockford().isBlocked() == true) {
+                    this.getModel().getMyRockford().moveUp();
                 }
                 break;
             case NOP:
             default:
-                this.getModel().getMyVehicle().doNothing();
+                this.getModel().getMyRockford().doNothing();
                 break;
             }
             this.clearStackOrder();
 
-            if (this.getModel().getMyVehicle().isWon() == true) {
+            if (this.getModel().getMyRockford().isWon() == true) {
 
                 this.getView().displayMessage("YOU WIN");
                 System.exit(0);
 
-            } else if (this.getModel().getMyVehicle().isLootable() == true) {
+            } else if (this.getModel().getMyRockford().isLootable() == true) {
                 score++;
                 System.out.println(score);
 

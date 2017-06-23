@@ -1,9 +1,6 @@
 package boulderdash.model;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.Observable;
 
 import boulderdash.model.element.IElement;
@@ -11,22 +8,22 @@ import boulderdash.model.element.motionless.MotionlessElementsFactory;
 import modele.dao.BddRequete;
 
 /**
- * <h1>The Road Class.</h1>
+ * <h1>The Map Class.</h1>
  *
  * @author Damien Watteau
  * @version 1.0
  * 
  */
-class Road extends Observable implements IRoad {
+class Map extends Observable implements IMap {
 
     /** The width. */
-    private int          width;
+    private int width;
 
     /** The height. */
-    private int          height;
+    private int height;
 
     /** The on the road. */
-    private IElement[][] onTheRoad;
+    private IElement[][] onTheMap;
 
     /**
      * Instantiates a new road with the content of the file fileName.
@@ -36,9 +33,9 @@ class Road extends Observable implements IRoad {
      * @throws IOException
      *             Signals that an I/O exception has occurred.
      */
-    Road(final String fileName) throws IOException {
+    Map(final String levelName) throws IOException {
         super();
-        this.loadFile(fileName);
+        this.loadLevel(levelName);
     }
 
     /**
@@ -49,13 +46,13 @@ class Road extends Observable implements IRoad {
      * @throws IOException
      *             Signals that an I/O exception has occurred.
      */
-    private void loadFile(final String fileName) throws IOException {
+    private void loadLevel(final String levelName) throws IOException {
 
         this.setWidth(40);
         this.setHeight(22);
-        this.onTheRoad = new IElement[this.getWidth()][this.getHeight()];
+        this.onTheMap = new IElement[this.getWidth()][this.getHeight()];
         BddRequete requete = new BddRequete ();
-        String texte = requete.requestSelect(fileName);
+        String texte = requete.requestSelect(levelName);
         String ligne;
 
         int nbLignes = 22;
@@ -65,7 +62,7 @@ class Road extends Observable implements IRoad {
             //System.out.println(ligne);
             for(int colCour = 0; colCour < nbCol; colCour++){
 
-                this.setOnTheRoadXY(MotionlessElementsFactory.getFromFileSymbol(ligne.toCharArray()[colCour]), colCour, lignCour);
+                this.setOnTheMapXY(MotionlessElementsFactory.getFromFileSymbol(ligne.toCharArray()[colCour]), colCour, lignCour);
 
             }
 
@@ -116,8 +113,8 @@ class Road extends Observable implements IRoad {
      * @see fr.exia.insanevehicles.model.IRoad#getOnTheRoadXY(int, int)
      */
     @Override
-    public final IElement getOnTheRoadXY(final int x, final int y) {
-        return this.onTheRoad[x][y];
+    public final IElement getOnTheMapXY(final int x, final int y) {
+        return this.onTheMap[x][y];
     }
 
     /**
@@ -130,8 +127,8 @@ class Road extends Observable implements IRoad {
      * @param y
      *            the y
      */
-    public void setOnTheRoadXY(final IElement element, final int x, final int y) {
-        this.onTheRoad[x][y] = element;
+    public void setOnTheMapXY(final IElement element, final int x, final int y) {
+        this.onTheMap[x][y] = element;
     }
 
     /*

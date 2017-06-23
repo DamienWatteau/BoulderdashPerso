@@ -15,7 +15,7 @@ import fr.exia.showboard.ISquare;
 public abstract class Element implements IElement {
 
     /** The sprite. */
-    private Sprite       sprite;
+    private Sprite sprite;
 
     /** The permeability. */
     private Permeability permeability;
