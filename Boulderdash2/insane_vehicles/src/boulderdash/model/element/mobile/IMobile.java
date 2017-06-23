@@ -73,12 +73,32 @@ public interface IMobile extends IPawn, IElement {
      */
     Boolean isCrashed();
     
+    /**
+     * Checks if the player won
+     *
+     * @return the boolean
+     */
     Boolean isWon();
     
+    /**
+     * Check si il y a un loot
+     *
+     * @return the boolean
+     */
     Boolean isLootable();
     
+    /**
+     * Check si le joueur est blocked
+     *
+     * @return the boolean
+     */
     Boolean isBlocked();
     
+    /**
+     * Check si il peut creuser
+     *
+     * @return the boolean
+     */
     Boolean isDesappear();
 
 

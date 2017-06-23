@@ -21,9 +21,9 @@ public abstract class Main {
     /** The Constant startX. */
     private static final int startX = 2;
 
-	/** The Constant startX. */
+	/** The Constant startY. */
 	private static final int startY = 2;
-
+	
 
 	/**
 	 * The main method.
@@ -37,10 +37,14 @@ public abstract class Main {
 	 */
 	public static void main(final String[] args) throws IOException, InterruptedException {
 		
-		String level;
 		Menu menu = new Menu();
 		BddRequete requete = new BddRequete();
+		String level;
+		
+		// Inscrit le joueur dans la base de donnée
 		requete.user(menu.menuPseudo());
+		
+		// Recupere le choix du niveau
   	   	level = menu.menuLevel();
   	   	
 		final IBoulderdashModel model = new BoulderdashModel(level, startX, startY);

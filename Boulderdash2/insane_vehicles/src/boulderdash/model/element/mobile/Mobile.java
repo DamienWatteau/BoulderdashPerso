@@ -39,14 +39,14 @@ abstract class Mobile extends Element implements IMobile {
      *
      * @param sprite
      *            the sprite
-     * @param road
-     *            the road
+     * @param map
+     *            the map
      * @param permeability
      *            the permeability
      */
     Mobile(final Sprite sprite, final IMap map, final Permeability permeability) {
         super(sprite, permeability);
-        this.setRoad(map);
+        this.setMap(map);
         this.position = new Point();
     }
 
@@ -59,8 +59,8 @@ abstract class Mobile extends Element implements IMobile {
      *            the y
      * @param sprite
      *            the sprite
-     * @param road
-     *            the road
+     * @param map
+     *            the map
      * @param permeability
      *            the permeability
      */
@@ -196,7 +196,7 @@ abstract class Mobile extends Element implements IMobile {
      * @param road
      *            the new road
      */
-    private void setRoad(final IMap map) {
+    private void setMap(final IMap map) {
         this.map = map;
     }
 
