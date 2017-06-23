@@ -54,7 +54,7 @@ class Road extends Observable implements IRoad {
         this.setHeight(22);
         this.onTheRoad = new IElement[this.getWidth()][this.getHeight()];
         BddRequete requete = new BddRequete ();
-        String texte = requete.requestSelect("Level 1");
+        String texte = requete.requestSelect(fileName);
         String ligne;
 
         int nbLignes = 22;

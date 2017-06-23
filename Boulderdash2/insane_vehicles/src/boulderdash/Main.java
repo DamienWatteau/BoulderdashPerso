@@ -1,9 +1,6 @@
 package boulderdash;
 
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
-
 import boulderdash.controller.BoulderdashController;
 import boulderdash.controller.IBoulderdashController;
 import boulderdash.model.BoulderdashModel;
@@ -39,14 +36,13 @@ public abstract class Main {
 	 */
 	public static void main(final String[] args) throws IOException, InterruptedException {
 		
-		
-//		Menu menu = new Menu();
-//		BddRequete requete = new BddRequete();
-//		requete.user(menu.menuPseudo());
-//  	   	requete.selectTable(menu.menuLevel());
+		String level;
+		Menu menu = new Menu();
+		BddRequete requete = new BddRequete();
+		requete.user(menu.menuPseudo());
+  	   	level = menu.menuLevel();
   	   	
-  	   	
-		final IBoulderdashModel model = new BoulderdashModel("road.txt", startX, startY);
+		final IBoulderdashModel model = new BoulderdashModel(level, startX, startY);
 		final BoulderdashView view = new BoulderdashView(model.getRoad(), model.getMyVehicle());
 		final IBoulderdashController controller = new BoulderdashController(view, model);
 		view.setOrderPerformer(controller.getOrderPeformer());
