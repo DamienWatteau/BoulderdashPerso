@@ -12,8 +12,8 @@ import modele.dao.BddRequete;
 /**
  * <h1>The InsaneVehicles Class.</h1>
  *
- * @author Jade
- * @version 0.2
+ * @author Damien Watteau
+ * @version 1.0
  */
 public abstract class Main {
 

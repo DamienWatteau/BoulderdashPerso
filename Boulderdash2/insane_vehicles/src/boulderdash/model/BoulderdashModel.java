@@ -7,6 +7,9 @@ import boulderdash.model.element.mobile.Rockford;
 
 /**
  * <h1>The Class InsaneVehiclesModel.</h1>
+ * 
+ * @author Damien Watteau
+ * @version 1.0
  */
 public class BoulderdashModel implements IBoulderdashModel {
 

@@ -7,8 +7,8 @@ import boulderdash.model.element.IElement;
 /**
  * <h1>The Interface IRoad.</h1>
  *
- * @author Jade
- * @version 0.1
+ * @author Damien Watteau
+ * @version 1.0
  */
 public interface IRoad {
 

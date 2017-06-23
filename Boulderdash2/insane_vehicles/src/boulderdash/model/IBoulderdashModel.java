@@ -5,8 +5,8 @@ import boulderdash.model.element.mobile.IMobile;
 /**
  * <h1>The Interface IInsaneVehiclesModel.</h1>
  *
- * @author Jade
- * @version 0.1
+ * @author Damien Watteau
+ * @version 1.0
  */
 public interface IBoulderdashModel {
 

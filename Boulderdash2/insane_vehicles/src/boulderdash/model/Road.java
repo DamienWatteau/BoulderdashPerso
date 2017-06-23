@@ -13,8 +13,8 @@ import modele.dao.BddRequete;
 /**
  * <h1>The Road Class.</h1>
  *
- * @author Jade
- * @version 0.3
+ * @author Damien Watteau
+ * @version 1.0
  */
 class Road extends Observable implements IRoad {
 
