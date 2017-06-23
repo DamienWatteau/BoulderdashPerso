@@ -97,7 +97,7 @@ public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView 
 		boardFrame.addKeyListener(this);
 		boardFrame.setFocusable(true);
 		boardFrame.setFocusTraversalKeysEnabled(false);
-
+		
 		for (int x = 0; x < this.getRoad().getWidth(); x++) {
 			for (int y = 0; y < this.getRoad().getHeight(); y++) {
 				boardFrame.addSquare(this.map.getOnTheMapXY(x, y), x, y);

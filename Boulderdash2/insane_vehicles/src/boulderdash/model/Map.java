@@ -24,6 +24,8 @@ class Map extends Observable implements IMap {
 
     /** The on the road. */
     private IElement[][] onTheMap;
+    
+    private final int score = 5;
 
     /**
      * Instantiates a new road with the content of the file fileName.
@@ -148,5 +150,9 @@ class Map extends Observable implements IMap {
     @Override
     public Observable getObservable() {
         return this;
+    }
+    
+    public int scoreNeeded (){
+    	return this.score;
     }
 }

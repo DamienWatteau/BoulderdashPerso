@@ -99,16 +99,15 @@ abstract class Mobile extends Element implements IMobile {
         this.setY(this.getY() + 1);
         this.setHasMoved();
         
-        if(this.getMap().getOnTheMapXY(this.getX(), this.getY()).getPermeability()==Permeability.DISAPPEAR){
-//        	this.getRoad().getOnTheRoadXY(this.getX(), this.getY()).setSprite(MotionlessElementsFactory.getDiamond().getSprite());
-        	
-        	 IElement audessus = this.getMap().getOnTheMapXY(this.getX(),this.getY());
-//             audessus = new Diamond();
-             audessus.setSprite(MotionlessElementsFactory.getDiamond().getSprite());
+//        if(this.getMap().getOnTheMapXY(this.getX(), this.getY()).getPermeability()==Permeability.DISAPPEAR){
+////        	this.getRoad().getOnTheRoadXY(this.getX(), this.getY()).setSprite(MotionlessElementsFactory.getDiamond().getSprite());
+//        	
+//        	 IElement audessus = this.getMap().getOnTheMapXY(this.getX(),this.getY());
+////             audessus = new Diamond();
+//             audessus.setSprite(MotionlessElementsFactory.getDiamond().getSprite());
              
         }
         
-    }
 
     /*
      * (non-Javadoc)
