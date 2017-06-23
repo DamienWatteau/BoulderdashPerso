@@ -5,8 +5,8 @@ import java.io.IOException;
 /**
  * <h1>The Interface IOrderPerformed.</h1>
  * 
- * @author Jade
- * @version 0.1
+ * @author Damien Watteau
+ * @version 1.0
  */
 public interface IOrderPerformer {
 

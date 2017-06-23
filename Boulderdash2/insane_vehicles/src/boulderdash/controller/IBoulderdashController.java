@@ -3,8 +3,8 @@ package boulderdash.controller;
 /**
  * <h1>The Interface IIinsaneVehiclesController.</h1>
  *
- * @author Jade
- * @version 0.1
+ * @author Damien Watteau
+ * @version 1.0
  * @see IOrderPerformer
  */
 public interface IBoulderdashController {

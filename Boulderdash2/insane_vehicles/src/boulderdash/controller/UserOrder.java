@@ -3,8 +3,8 @@ package boulderdash.controller;
 /**
  * <h1>The Enum UserOrder.</h1>
  *
- * @author Jade
- * @version 0.1
+ * @author Damien Watteau
+ * @version 1.0
  */
 public enum UserOrder {
 
@@ -14,9 +14,12 @@ public enum UserOrder {
     /** The left. */
     LEFT,
     
+    /** The down. */
     DOWN,
     
+    /** The UP. */
     UP,
+    
     /** The nop. */
     NOP;
 }

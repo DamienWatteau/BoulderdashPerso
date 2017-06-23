@@ -11,14 +11,14 @@ import boulderdash.model.element.motionless.MotionlessElementsFactory;
 /**
  * <h1>The Class InsaneVehiclesController.</h1>
  *
- * @author Jade
- * @version 0.1
+ * @author Damien Watteau
+ * @version 1.0
  * @see IOrderPerformer
  */
 public class BoulderdashController implements IBoulderdashController, IOrderPerformer {
 
     /** The Constant speed. */
-    private static final int     speed = 200;
+    private static final int speed = 200;
 
     /** The view. */
     private IBoulderdashView  view;
@@ -27,7 +27,7 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
     private IBoulderdashModel model;
 
     /** The stack order. */
-    private UserOrder            stackOrder;
+    private UserOrder stackOrder;
 
     /**
      * Instantiates a new insane vehicles controller.
@@ -84,8 +84,6 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
                 break;
             }
             this.clearStackOrder();
-
-//            this.getView().followMyVehicle();
 
             if (this.getModel().getMyVehicle().isWon() == true) {
 
