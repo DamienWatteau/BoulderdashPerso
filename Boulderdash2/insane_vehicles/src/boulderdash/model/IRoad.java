@@ -9,6 +9,7 @@ import boulderdash.model.element.IElement;
  *
  * @author Damien Watteau
  * @version 1.0
+ * 
  */
 public interface IRoad {
 

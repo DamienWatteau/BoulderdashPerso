@@ -8,10 +8,11 @@ import fr.exia.showboard.IPawn;
 /**
  * <h1>The Interface IMobile.</h1>
  *
- * @author Jade
- * @version 0.1
+ * @author Damien Watteau
+ * @version 1.0
  * @see IPawn
  * @see IElement
+ * 
  */
 public interface IMobile extends IPawn, IElement {
 

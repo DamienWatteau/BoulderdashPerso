@@ -5,6 +5,7 @@ package boulderdash.controller;
  *
  * @author Damien Watteau
  * @version 1.0
+ * 
  */
 public enum UserOrder {
 

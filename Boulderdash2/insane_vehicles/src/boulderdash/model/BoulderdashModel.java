@@ -10,6 +10,7 @@ import boulderdash.model.element.mobile.Rockford;
  * 
  * @author Damien Watteau
  * @version 1.0
+ * 
  */
 public class BoulderdashModel implements IBoulderdashModel {
 

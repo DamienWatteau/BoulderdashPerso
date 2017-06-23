@@ -6,6 +6,7 @@ package boulderdash.controller;
  * @author Damien Watteau
  * @version 1.0
  * @see IOrderPerformer
+ * 
  */
 public interface IBoulderdashController {
 

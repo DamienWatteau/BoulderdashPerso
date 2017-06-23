@@ -1,8 +1,9 @@
 /**
  * This package contains classes to produce Mobile element.
  *
- * @author Jade
- * @version 0.1
+ * @author Damien Watteau
+ * @version 1.0
+ * 
  */
 
 package boulderdash.model.element.mobile;

@@ -1,8 +1,9 @@
 /**
  * This package contains high levels of abstraction classes.
  *
- * @author Jade
- * @version 0.3
+ * @author Damien Watteau
+ * @version 1.0
+ * 
  */
 
 package boulderdash.model.element;

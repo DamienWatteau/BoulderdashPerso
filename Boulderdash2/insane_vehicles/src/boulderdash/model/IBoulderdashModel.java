@@ -7,6 +7,7 @@ import boulderdash.model.element.mobile.IMobile;
  *
  * @author Damien Watteau
  * @version 1.0
+ * 
  */
 public interface IBoulderdashModel {
 

@@ -9,8 +9,9 @@ import boulderdash.model.element.Sprite;
 /**
  * <h1>The MyVehicle Class.</h1>
  *
- * @author Jade
- * @version 0.2
+ * @author Damien Watteau
+ * @version 1.0
+ * 
  */
 public class Rockford extends Mobile {
 

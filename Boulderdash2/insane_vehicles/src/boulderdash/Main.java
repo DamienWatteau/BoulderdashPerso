@@ -14,6 +14,7 @@ import modele.dao.BddRequete;
  *
  * @author Damien Watteau
  * @version 1.0
+ * 
  */
 public abstract class Main {
 

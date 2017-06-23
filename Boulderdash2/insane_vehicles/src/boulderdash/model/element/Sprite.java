@@ -9,8 +9,9 @@ import javax.imageio.ImageIO;
 /**
  * <h1>The Sprite Class.</h1>
  *
- * @author Jade
- * @version 0.1
+ * @author Damien Watteau
+ * @version 1.0
+ * 
  */
 public class Sprite {
 

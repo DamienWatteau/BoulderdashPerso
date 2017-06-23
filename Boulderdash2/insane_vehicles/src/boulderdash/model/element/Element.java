@@ -7,9 +7,10 @@ import fr.exia.showboard.ISquare;
 /**
  * <h1>The Element Class.</h1>
  *
- * @author Jade
- * @version 0.4
+ * @author Damien Watteau
+ * @version 1.0
  * @see ISquare
+ * 
  */
 public abstract class Element implements IElement {
 

@@ -7,9 +7,10 @@ import fr.exia.showboard.ISquare;
 /**
  * <h1>The Interface IElement.</h1>
  *
- * @author Jade
- * @version 0.1
+ * @author Damien Watteau
+ * @version 1.0
  * @see ISquare
+ * 
  */
 public interface IElement extends ISquare {
 

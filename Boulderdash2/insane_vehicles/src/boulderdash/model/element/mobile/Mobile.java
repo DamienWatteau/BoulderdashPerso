@@ -14,8 +14,9 @@ import fr.exia.showboard.IBoard;
 /**
  * <h1>The Mobile Class.</h1>
  *
- * @author Jade
- * @version 0.3
+ * @author Damien Watteau
+ * @version 1.0
+ * 
  */
 abstract class Mobile extends Element implements IMobile {
 
