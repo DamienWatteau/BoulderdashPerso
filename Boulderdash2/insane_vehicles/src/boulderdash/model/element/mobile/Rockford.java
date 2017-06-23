@@ -16,10 +16,10 @@ import boulderdash.model.element.Sprite;
 public class Rockford extends Mobile {
 
 	/** The Constant SPRITE. */
-    private static final Sprite sprite          = new Sprite('H', "Rockford.png");
+    private static final Sprite sprite = new Sprite('H', "Rockford.png");
 
     /** The Constant spriteTurnLeft. */
-    private static final Sprite spriteTurnLeft  = new Sprite('H', "Left.png");
+    private static final Sprite spriteTurnLeft = new Sprite('H', "Left.png");
 
     /** The Constant spriteTurnRight. */
     private static final Sprite spriteTurnRight = new Sprite('H', "Right.png");
@@ -45,8 +45,8 @@ public class Rockford extends Mobile {
      * @throws IOException
      *             Signals that an I/O exception has occurred.
      */
-    public Rockford(final int x, final int y, final IMap road) throws IOException {
-        super(x, y, sprite, road, Permeability.PENETRABLE); // BLOCKING 
+    public Rockford(final int x, final int y, final IMap map) throws IOException {
+        super(x, y, sprite, map, Permeability.PENETRABLE); // BLOCKING 
         spriteTurnLeft.loadImage();
         spriteTurnRight.loadImage();
         spriteDie.loadImage();

@@ -35,7 +35,7 @@ public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView 
 	private Rectangle closeView;
 
 	/** The road. */
-	private IMap road;
+	private IMap map;
 
 	/** My vehicle. */
 	private IMobile myVehicle;
@@ -56,9 +56,9 @@ public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView 
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
 	 */
-	public BoulderdashView(final IMap road, final IMobile myVehicle) throws IOException {
+	public BoulderdashView(final IMap map, final IMobile myVehicle) throws IOException {
 		this.setView(roadView);
-		this.setRoad(road);
+		this.setRoad(map);
 		this.setMyVehicle(myVehicle);
 		this.getMyVehicle().getSprite().loadImage();
 		this.setCloseView(new Rectangle(0, this.getMyVehicle().getY(), this.getRoad().getWidth(), roadView));
@@ -100,7 +100,7 @@ public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView 
 
 		for (int x = 0; x < this.getRoad().getWidth(); x++) {
 			for (int y = 0; y < this.getRoad().getHeight(); y++) {
-				boardFrame.addSquare(this.road.getOnTheMapXY(x, y), x, y);
+				boardFrame.addSquare(this.map.getOnTheMapXY(x, y), x, y);
 			}
 		}
 		boardFrame.addPawn(this.getMyVehicle());
@@ -213,7 +213,7 @@ public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView 
 	 * @return the road
 	 */
 	private IMap getRoad() {
-		return this.road;
+		return this.map;
 	}
 
 	/**
@@ -224,8 +224,8 @@ public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView 
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
 	 */
-	private void setRoad(final IMap road) throws IOException {
-		this.road = road;
+	private void setRoad(final IMap map) throws IOException {
+		this.map = map;
 		for (int x = 0; x < this.getRoad().getWidth(); x++) {
 			for (int y = 0; y < this.getRoad().getHeight(); y++) {
 				this.getRoad().getOnTheMapXY(x, y).getSprite().loadImage();
