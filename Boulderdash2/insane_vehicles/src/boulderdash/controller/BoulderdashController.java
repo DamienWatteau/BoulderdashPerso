@@ -95,7 +95,8 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
 			this.clearStackOrder();
 
 			if (this.getModel().getMyRockford().isWon() == true) {
-				if (score == 5) {
+				
+				if (score == 10) {
 					this.getView().displayMessage("YOU WIN");
 					System.exit(0);
 				}
