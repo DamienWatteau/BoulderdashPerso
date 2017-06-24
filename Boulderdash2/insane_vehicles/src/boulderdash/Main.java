@@ -17,7 +17,7 @@ import modele.dao.BddRequete;
  * 
  */
 public abstract class Main {
-
+//
     /** The Constant startX. */
     private static final int startX = 2;
 
