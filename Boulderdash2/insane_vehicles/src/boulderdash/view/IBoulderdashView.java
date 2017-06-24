@@ -1,10 +1,10 @@
 package boulderdash.view;
 
 /**
- * <h1>The Interface IInsaneVehiclesView.</h1>
+ * <h1>The Interface IView.</h1>
  *
- * @author Jade
- * @version 0.1
+ * @author Damien Watteau
+ * @version 1.0
  */
 public interface IBoulderdashView {
 
@@ -17,7 +17,7 @@ public interface IBoulderdashView {
     void displayMessage(String message);
 
     /**
-     * Follow myVehicle.
+     * Follow rockford.
      */
     void followMyVehicle();
 

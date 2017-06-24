@@ -2,6 +2,12 @@ package boulderdash.view;
 
 import javax.swing.JOptionPane;
 
+/**
+ * <h1>The Menu Class.</h1>
+ *
+ * @author Damien Watteau
+ * @version 1.0
+ */
 public class Menu {
 
 		@SuppressWarnings("static-access")

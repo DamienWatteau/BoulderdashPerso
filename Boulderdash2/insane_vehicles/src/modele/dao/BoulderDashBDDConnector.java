@@ -7,7 +7,7 @@ import java.sql.SQLException;
 /**
  * <h1>The BoulderDashBDDConnector Class.</h1>
  *
- * @author Damien
+ * @author Damien Watteau
  * @version 1.0
  */
 public class BoulderDashBDDConnector {

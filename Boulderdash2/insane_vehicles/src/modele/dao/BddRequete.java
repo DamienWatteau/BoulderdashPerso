@@ -9,7 +9,7 @@ import boulderdash.controller.BoulderdashController;
 /**
  * <h1>The BddRequete Class.</h1>
  *
- * @author Damien
+ * @author Damien Watteau
  * @version 1.0
  */
 public class BddRequete {

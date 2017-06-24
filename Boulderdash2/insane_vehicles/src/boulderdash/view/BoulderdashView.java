@@ -18,10 +18,10 @@ import boulderdash.model.element.mobile.IMobile;
 import fr.exia.showboard.BoardFrame;
 
 /**
- * <h1>The InsaneVehiclesView Class.</h1>
+ * <h1>The BoulderdashView Class.</h1>
  *
- * @author Jade
- * @version 0.4
+ * @author Damien Watteau
+ * @version 1.0
  */
 public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView {
 
@@ -34,10 +34,10 @@ public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView 
 	/** The Constant closeView. */
 	private Rectangle closeView;
 
-	/** The road. */
+	/** The map. */
 	private IMap map;
 
-	/** My vehicle. */
+	/** My rockford. */
 	private IMobile Rockford;
 
 	/** The view. */
@@ -47,12 +47,12 @@ public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView 
 	private IOrderPerformer orderPerformer;
 
 	/**
-	 * Instantiates a new insane vehicles View.
+	 * Instantiates a new View.
 	 *
-	 * @param road
-	 *            the road
-	 * @param myVehicle
-	 *            the my vehicle
+	 * @param map
+	 *            the map
+	 * @param rockford
+	 *            the my rockford
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
 	 */
@@ -114,7 +114,7 @@ public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView 
 	}
 
 	/**
-	 * Prints the road and the player's vehicle in the console.
+	 * Prints the map and the rockford in the console.
 	 *
 	 * @param yStart
 	 *            the y start
@@ -208,19 +208,19 @@ public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView 
 	}
 
 	/**
-	 * Gets the road.
+	 * Gets the map.
 	 *
-	 * @return the road
+	 * @return the map
 	 */
 	private IMap getMap() {
 		return this.map;
 	}
 
 	/**
-	 * Sets the road.
+	 * Sets the map.
 	 *
-	 * @param road
-	 *            the new road
+	 * @param map
+	 *            the new map
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
 	 */
@@ -234,19 +234,19 @@ public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView 
 	}
 
 	/**
-	 * Gets my vehicle.
+	 * Gets my rockford.
 	 *
-	 * @return my vehicle
+	 * @return my rockford
 	 */
 	private IMobile getRockford() {
 		return this.Rockford;
 	}
 
 	/**
-	 * Sets my vehicle.
+	 * Sets my rockford.
 	 *
-	 * @param myVehicle
-	 *            my new vehicle
+	 * @param rockford
+	 *            my new rockford
 	 */
 	private void setRockford(final IMobile Rockford) {
 		this.Rockford = Rockford;
