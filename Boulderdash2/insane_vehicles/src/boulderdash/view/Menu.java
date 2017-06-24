@@ -3,8 +3,6 @@ package boulderdash.view;
 import javax.swing.JOptionPane;
 
 public class Menu {
-	
-		private String test;
 
 		@SuppressWarnings("static-access")
 		public String menuPseudo(){
