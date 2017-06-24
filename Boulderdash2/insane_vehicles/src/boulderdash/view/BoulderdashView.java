@@ -103,7 +103,7 @@ public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView 
 		boardFrame.addPawn(this.getRockford());
 
 		this.getMap().getObservable().addObserver(boardFrame.getObserver());
-		this.followMyVehicle();
+		this.followRockford();
 
 		boardFrame.setVisible(true);
 			
@@ -199,7 +199,7 @@ public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView 
 	 * @see fr.exia.insanevehicles.view.IInsaneVehiclesView#followMyvehicle()
 	 */
 	@Override
-	public final void followMyVehicle() {
+	public final void followRockford() {
 		this.getCloseView().y = this.getRockford().getY() - 2;
 	}
 

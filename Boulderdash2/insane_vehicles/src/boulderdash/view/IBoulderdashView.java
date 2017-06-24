@@ -19,6 +19,6 @@ public interface IBoulderdashView {
     /**
      * Follow rockford.
      */
-    void followMyVehicle();
+    void followRockford();
 
 }
