@@ -7,7 +7,7 @@ import boulderdash.model.element.Permeability;
 import boulderdash.model.element.Sprite;
 
 /**
- * <h1>The MyVehicle Class.</h1>
+ * <h1>The Rockford Class.</h1>
  *
  * @author Damien Watteau
  * @version 1.0
@@ -34,14 +34,14 @@ public class Rockford extends Mobile {
     private static final Sprite spriteDie   = new Sprite('H', "Die.png");
 
     /**
-     * Instantiates a new my vehicle.
+     * Instantiates a new rockford.
      *
      * @param x
      *            the x
      * @param y
      *            the y
      * @param road
-     *            the road
+     *            the map
      * @throws IOException
      *             Signals that an I/O exception has occurred.
      */

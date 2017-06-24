@@ -3,7 +3,7 @@ package boulderdash.model;
 import boulderdash.model.element.mobile.IMobile;
 
 /**
- * <h1>The Interface IInsaneVehiclesModel.</h1>
+ * <h1>The Interface IBoulderdashModel.</h1>
  *
  * @author Damien Watteau
  * @version 1.0
@@ -12,16 +12,16 @@ import boulderdash.model.element.mobile.IMobile;
 public interface IBoulderdashModel {
 
     /**
-     * Gets the road.
+     * Gets the map.
      *
-     * @return the road
+     * @return the map
      */
     IMap getRoad();
 
     /**
-     * Gets the my vehicle.
+     * Gets the rockford.
      *
-     * @return the myVehicle
+     * @return the rockford
      */
     IMobile getMyRockford();
 

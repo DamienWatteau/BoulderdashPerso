@@ -1,7 +1,7 @@
 package boulderdash.controller;
 
 /**
- * <h1>The Interface IIinsaneVehiclesController.</h1>
+ * <h1>The Interface IBoulderdasController.</h1>
  *
  * @author Damien Watteau
  * @version 1.0

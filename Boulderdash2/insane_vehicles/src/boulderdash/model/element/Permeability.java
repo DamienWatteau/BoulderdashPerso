@@ -11,14 +11,19 @@ public enum Permeability {
 
     /** The blocking. */
     BLOCKING,
-    /** The penetrable. */
+    
+    /** The win. */
     WIN,
     
+    /** The killing. */
     KILLING,
     
+    /** The lootable. */
     LOOTABLE,
     
+    /** The disappear. */
     DISAPPEAR,
     
+    /** The penetrable. */
     PENETRABLE;
 }

@@ -22,16 +22,16 @@ class Map extends Observable implements IMap {
     /** The height. */
     private int height;
 
-    /** The on the road. */
+    /** The on the map. */
     private IElement[][] onTheMap;
     
-    private final int score = 5;
+//    private final int score = 5;
 
     /**
-     * Instantiates a new road with the content of the file fileName.
+     * Instantiates a new level.
      *
-     * @param fileName
-     *            the file name where the map of the road is
+     * @param level
+     *            level name
      * @throws IOException
      *             Signals that an I/O exception has occurred.
      */
@@ -152,7 +152,7 @@ class Map extends Observable implements IMap {
         return this;
     }
     
-    public int scoreNeeded (){
-    	return this.score;
-    }
+//    public int scoreNeeded (){
+//    	return this.score;
+//    }
 }

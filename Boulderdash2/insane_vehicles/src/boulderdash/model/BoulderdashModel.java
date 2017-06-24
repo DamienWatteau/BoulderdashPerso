@@ -6,7 +6,7 @@ import boulderdash.model.element.mobile.IMobile;
 import boulderdash.model.element.mobile.Rockford;
 
 /**
- * <h1>The Class InsaneVehiclesModel.</h1>
+ * <h1>The Class BoulderdashModel.</h1>
  * 
  * @author Damien Watteau
  * @version 1.0

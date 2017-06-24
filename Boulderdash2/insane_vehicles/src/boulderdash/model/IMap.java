@@ -5,7 +5,7 @@ import java.util.Observable;
 import boulderdash.model.element.IElement;
 
 /**
- * <h1>The Interface IRoad.</h1>
+ * <h1>The Interface IMap.</h1>
  *
  * @author Damien Watteau
  * @version 1.0
@@ -28,13 +28,13 @@ public interface IMap {
     int getHeight();
 
     /**
-     * Gets the on the road XY.
+     * Gets the on the map XY.
      *
      * @param x
      *            the x
      * @param y
      *            the y
-     * @return the on the road XY
+     * @return the on the map XY
      */
     IElement getOnTheMapXY(int x, int y);
     

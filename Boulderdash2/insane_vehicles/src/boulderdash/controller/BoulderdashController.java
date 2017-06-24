@@ -33,7 +33,7 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
 	private UserOrder stackOrder;
 	
 	/**
-	 * Instantiates a new insane vehicles controller.
+	 * Instantiates a new controller.
 	 *
 	 * @param view
 	 *            the view
@@ -233,6 +233,4 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
 	public IOrderPerformer getOrderPeformer() {
 		return this;
 	}
-
-
 }

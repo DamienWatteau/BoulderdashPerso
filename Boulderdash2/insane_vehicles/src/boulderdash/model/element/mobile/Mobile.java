@@ -28,7 +28,7 @@ abstract class Mobile extends Element implements IMobile {
     /** The alive. */
     private Boolean alive = true;
 
-    /** The road. */
+    /** The map. */
     private IMap map;
 
     /** The board. */
@@ -181,19 +181,19 @@ abstract class Mobile extends Element implements IMobile {
     }
 
     /**
-     * Gets the road.
+     * Gets the map.
      *
-     * @return the road
+     * @return the map
      */
     public IMap getMap() {
         return this.map;
     }
 
     /**
-     * Sets the road.
+     * Sets the map.
      *
-     * @param road
-     *            the new road
+     * @param map
+     *            the new map
      */
     private void setMap(final IMap map) {
         this.map = map;

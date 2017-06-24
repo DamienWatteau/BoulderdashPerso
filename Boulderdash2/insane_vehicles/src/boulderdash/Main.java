@@ -44,8 +44,6 @@ public abstract class Main {
 		// Inscrit le joueur dans la base de donnée
 		requete.user(menu.menuPseudo());
 		
-//		requete.requestScore(4, 1);
-		
 		// Recupere le choix du niveau
   	   	level = menu.menuLevel();
 
