@@ -44,9 +44,11 @@ public abstract class Main {
 		// Inscrit le joueur dans la base de donnée
 		requete.user(menu.menuPseudo());
 		
+//		requete.requestScore(4, 1);
+		
 		// Recupere le choix du niveau
   	   	level = menu.menuLevel();
-  	   	
+
 		final IBoulderdashModel model = new BoulderdashModel(level, startX, startY);
 		final BoulderdashView view = new BoulderdashView(model.getRoad(), model.getMyRockford());
 		final IBoulderdashController controller = new BoulderdashController(view, model);

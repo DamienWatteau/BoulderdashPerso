@@ -38,7 +38,7 @@ public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView 
 	private IMap map;
 
 	/** My vehicle. */
-	private IMobile myVehicle;
+	private IMobile Rockford;
 
 	/** The view. */
 	private int view;
@@ -56,12 +56,12 @@ public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView 
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
 	 */
-	public BoulderdashView(final IMap map, final IMobile myVehicle) throws IOException {
+	public BoulderdashView(final IMap map, final IMobile Rockford) throws IOException {
 		this.setView(roadView);
-		this.setRoad(map);
-		this.setMyVehicle(myVehicle);
-		this.getMyVehicle().getSprite().loadImage();
-		this.setCloseView(new Rectangle(0, this.getMyVehicle().getY(), this.getRoad().getWidth(), roadView));
+		this.setMap(map);
+		this.setRockford(Rockford);
+		this.getRockford().getSprite().loadImage();
+		this.setCloseView(new Rectangle(0, this.getRockford().getY(), this.getMap().getWidth(), roadView));
 		SwingUtilities.invokeLater(this);
 	}
 
@@ -85,7 +85,7 @@ public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView 
 	public final void run() {
 		final BoardFrame boardFrame = new BoardFrame("BoulderDash");
 		boardFrame.setResizable(true);
-		boardFrame.setDimension(new Dimension(this.getRoad().getWidth(), this.getRoad().getHeight()));
+		boardFrame.setDimension(new Dimension(this.getMap().getWidth(), this.getMap().getHeight()));
 		boardFrame.setDisplayFrame(this.closeView);
 		boardFrame.setSize(1161,669);
 		boardFrame.setLocationRelativeTo(null);
@@ -98,14 +98,14 @@ public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView 
 		boardFrame.setFocusable(true);
 		boardFrame.setFocusTraversalKeysEnabled(false);
 		
-		for (int x = 0; x < this.getRoad().getWidth(); x++) {
-			for (int y = 0; y < this.getRoad().getHeight(); y++) {
+		for (int x = 0; x < this.getMap().getWidth(); x++) {
+			for (int y = 0; y < this.getMap().getHeight(); y++) {
 				boardFrame.addSquare(this.map.getOnTheMapXY(x, y), x, y);
 			}
 		}
-		boardFrame.addPawn(this.getMyVehicle());
+		boardFrame.addPawn(this.getRockford());
 
-		this.getRoad().getObservable().addObserver(boardFrame.getObserver());
+		this.getMap().getObservable().addObserver(boardFrame.getObserver());
 		this.followMyVehicle();
 
 		boardFrame.setVisible(true);
@@ -120,16 +120,16 @@ public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView 
 	 *            the y start
 	 */
 	public final void show(final int yStart) {
-		int y = yStart % this.getRoad().getHeight();
+		int y = yStart % this.getMap().getHeight();
 		for (int view = 0; view < this.getView(); view++) {
-			for (int x = 0; x < this.getRoad().getWidth(); x++) {
-				if ((x == this.getMyVehicle().getX()) && (y == yStart)) {
-					System.out.print(this.getMyVehicle().getSprite().getConsoleImage());
+			for (int x = 0; x < this.getMap().getWidth(); x++) {
+				if ((x == this.getRockford().getX()) && (y == yStart)) {
+					System.out.print(this.getRockford().getSprite().getConsoleImage());
 				} else {
-					System.out.print(this.getRoad().getOnTheMapXY(x, y).getSprite().getConsoleImage());
+					System.out.print(this.getMap().getOnTheMapXY(x, y).getSprite().getConsoleImage());
 				}
 			}
-			y = (y + 1) % this.getRoad().getHeight();
+			y = (y + 1) % this.getMap().getHeight();
 			System.out.print("\n");
 		}
 	}
@@ -204,7 +204,7 @@ public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView 
 	 */
 	@Override
 	public final void followMyVehicle() {
-		this.getCloseView().y = this.getMyVehicle().getY() - 2;
+		this.getCloseView().y = this.getRockford().getY() - 2;
 	}
 
 	/**
@@ -212,7 +212,7 @@ public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView 
 	 *
 	 * @return the road
 	 */
-	private IMap getRoad() {
+	private IMap getMap() {
 		return this.map;
 	}
 
@@ -224,11 +224,11 @@ public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView 
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
 	 */
-	private void setRoad(final IMap map) throws IOException {
+	private void setMap(final IMap map) throws IOException {
 		this.map = map;
-		for (int x = 0; x < this.getRoad().getWidth(); x++) {
-			for (int y = 0; y < this.getRoad().getHeight(); y++) {
-				this.getRoad().getOnTheMapXY(x, y).getSprite().loadImage();
+		for (int x = 0; x < this.getMap().getWidth(); x++) {
+			for (int y = 0; y < this.getMap().getHeight(); y++) {
+				this.getMap().getOnTheMapXY(x, y).getSprite().loadImage();
 			}
 		}
 	}
@@ -238,8 +238,8 @@ public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView 
 	 *
 	 * @return my vehicle
 	 */
-	private IMobile getMyVehicle() {
-		return this.myVehicle;
+	private IMobile getRockford() {
+		return this.Rockford;
 	}
 
 	/**
@@ -248,8 +248,8 @@ public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView 
 	 * @param myVehicle
 	 *            my new vehicle
 	 */
-	private void setMyVehicle(final IMobile myVehicle) {
-		this.myVehicle = myVehicle;
+	private void setRockford(final IMobile Rockford) {
+		this.Rockford = Rockford;
 	}
 
 	/**

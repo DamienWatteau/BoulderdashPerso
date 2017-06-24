@@ -41,6 +41,9 @@ public interface IMobile extends IPawn, IElement {
      */
     void doNothing();
     
+    /**
+     * Do nothing.
+     */
     void die();
 
     /**
@@ -100,7 +103,6 @@ public interface IMobile extends IPawn, IElement {
      * @return the boolean
      */
     Boolean isDesappear();
-
 
     /*
      * (non-Javadoc)

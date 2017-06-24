@@ -1,7 +1,7 @@
 /**
  * Provides a Component View.
  *
- * @author Jade
- * @version 0.2
+ * @author Damien Watteau
+ * @version 1.0
  */
 package boulderdash.view;

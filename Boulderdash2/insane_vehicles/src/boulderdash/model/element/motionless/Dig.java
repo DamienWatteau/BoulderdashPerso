@@ -4,10 +4,10 @@ import boulderdash.model.element.Permeability;
 import boulderdash.model.element.Sprite;
 
 /**
- * <h1>The Class Ditch.</h1>
+ * <h1>The Class Dig.</h1>
  *
- * @author Jade
- * @version 0.2
+ * @author Damien Watteau
+ * @version 1.0
  */
 class Dig extends MotionlessElement {
 
@@ -15,7 +15,7 @@ class Dig extends MotionlessElement {
     private static final Sprite SPRITE = new Sprite(')', "Dig.png");
 
     /**
-     * Instantiates a new ditch.
+     * Instantiates a new dig.
      */
     Dig() {
         super(SPRITE, Permeability.BLOCKING);

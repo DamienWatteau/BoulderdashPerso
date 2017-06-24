@@ -7,8 +7,8 @@ import boulderdash.model.element.Sprite;
 /**
  * <h1>The MotionlessElement Class.</h1>
  *
- * @author Jade
- * @version 0.2
+ * @author Damien Watteau
+ * @version 1.0
  */
 abstract class MotionlessElement extends Element {
 

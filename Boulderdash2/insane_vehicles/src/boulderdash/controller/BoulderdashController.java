@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import boulderdash.model.IBoulderdashModel;
 import boulderdash.view.IBoulderdashView;
+import modele.dao.BddRequete;
 import boulderdash.model.element.IElement;
 import boulderdash.model.element.mobile.*;
 import boulderdash.model.element.motionless.MotionlessElementsFactory;
@@ -26,10 +27,11 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
 
 	/** The model. */
 	private IBoulderdashModel model;
+	
 
 	/** The stack order. */
 	private UserOrder stackOrder;
-
+	
 	/**
 	 * Instantiates a new insane vehicles controller.
 	 *
@@ -98,6 +100,8 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
 				
 				if (score == 10) {
 					this.getView().displayMessage("YOU WIN");
+					
+					
 					System.exit(0);
 				}
 
@@ -229,5 +233,6 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
 	public IOrderPerformer getOrderPeformer() {
 		return this;
 	}
+
 
 }

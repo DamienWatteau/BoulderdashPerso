@@ -4,6 +4,12 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+/**
+ * <h1>The BoulderDashBDDConnector Class.</h1>
+ *
+ * @author Damien
+ * @version 1.0
+ */
 public class BoulderDashBDDConnector {
 
 	  //Objet Connection

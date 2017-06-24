@@ -4,7 +4,18 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import boulderdash.controller.BoulderdashController;
+
+/**
+ * <h1>The BddRequete Class.</h1>
+ *
+ * @author Damien
+ * @version 1.0
+ */
 public class BddRequete {
+	
+	BoulderdashController controller;
+	
 	
 	public void user (String nom){
 
@@ -75,4 +86,19 @@ public class BddRequete {
 
         return null;
     }
+	
+	public void requestScore (int ID_player, int ID_map){
+		
+		try {
+				Statement state3 = BoulderDashBDDConnector.getInstance().createStatement();
+
+			    //state2.executeUpdate("INSERT INTO players (player_name) VALUES ('"+nom+"') ");
+			    //state3.executeUpdate("INSERT INTO play (player_score, player_time, ID_player, ID_map) VALUES ("+score+", null,"+ID_player+","+ID_map+");");
+				//state3.executeUpdate("INSERT INTO play (player_score, player_time, ID_player, ID_map) VALUES ("+this.controller.getScore()+", null,"+ID_player+","+ID_map+");");
+	       
+		  } catch (SQLException e) {
+		    e.printStackTrace();
+		  }
+	}
 }
+	

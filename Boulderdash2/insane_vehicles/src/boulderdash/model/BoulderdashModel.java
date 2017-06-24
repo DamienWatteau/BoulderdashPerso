@@ -18,7 +18,7 @@ public class BoulderdashModel implements IBoulderdashModel {
     private IMap   map;
 
     /** The my vehicle. */
-    private IMobile myVehicle;
+    private IMobile rockford;
 
     /**
      * Instantiates a new insane vehicles model.
@@ -32,10 +32,10 @@ public class BoulderdashModel implements IBoulderdashModel {
      * @throws IOException
      *             Signals that an I/O exception has occurred.
      */
-    public BoulderdashModel(final String fileName, final int myVehicleStartX, final int myVehicleStartY)
+    public BoulderdashModel(final String level, final int rockfordStartX, final int rockfordStartY)
             throws IOException {
-        this.setRoad(new Map(fileName));
-        this.setMyVehicle(new Rockford(myVehicleStartX, myVehicleStartY, this.getRoad()));
+        this.setRoad(new Map(level));
+        this.setRockford(new Rockford(rockfordStartX, rockfordStartY, this.getRoad()));
     }
 
     /* (non-Javadoc)
@@ -61,7 +61,7 @@ public class BoulderdashModel implements IBoulderdashModel {
      */
     @Override
     public final IMobile getMyRockford() {
-        return this.myVehicle;
+        return this.rockford;
     }
 
     /**
@@ -70,8 +70,8 @@ public class BoulderdashModel implements IBoulderdashModel {
      * @param myVehicle
      *            the myVehicle to set
      */
-    private void setMyVehicle(final IMobile myVehicle) {
-        this.myVehicle = myVehicle;
+    private void setRockford(final IMobile rockford) {
+        this.rockford = rockford;
     }
 
 }

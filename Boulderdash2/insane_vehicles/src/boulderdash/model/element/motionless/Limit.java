@@ -4,10 +4,10 @@ import boulderdash.model.element.Permeability;
 import boulderdash.model.element.Sprite;
 
 /**
- * <h1>The Tree Class.</h1>
+ * <h1>The Limit Class.</h1>
  *
- * @author Jade
- * @version 0.2
+ * @author Damien Watteau
+ * @version 1.0
  */
 class Limit extends MotionlessElement {
 
@@ -15,7 +15,7 @@ class Limit extends MotionlessElement {
     private static final Sprite SPRITE = new Sprite('X', "LimitBlock.png");
 
     /**
-     * Instantiates a new tree.
+     * Instantiates a new limit.
      */
     Limit() {
         super(SPRITE, Permeability.BLOCKING);

@@ -4,10 +4,10 @@ import boulderdash.model.element.Permeability;
 import boulderdash.model.element.Sprite;
 
 /**
- * <h1>The DitchRight Class.</h1>
+ * <h1>The Golem Class.</h1>
  *
- * @author Jade
- * @version 0.2
+ * @author Damien Watteau
+ * @version 1.0
  */
 class Golem extends MotionlessElement {
 
@@ -15,7 +15,7 @@ class Golem extends MotionlessElement {
     private static final Sprite SPRITE = new Sprite(']', "golem.png");
 
     /**
-     * Instantiates a new ditchRight.
+     * Instantiates a new golem.
      */
     Golem() {
         super(SPRITE, Permeability.BLOCKING);

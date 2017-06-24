@@ -8,9 +8,10 @@ public class Menu {
 		public String menuPseudo(){
 		JOptionPane jop = new JOptionPane();
 	    String nom = jop.showInputDialog(null, "Veuillez écrire votre pseudo !", "BoulderDash", JOptionPane.QUESTION_MESSAGE);
-			return nom;
-		}
 		
+			return nom;
+	    
+		}
 		
 		@SuppressWarnings("static-access")
 		public String menuLevel(){
@@ -23,6 +24,8 @@ public class Menu {
 		      null,
 		      levelname,
 		      levelname[0]);
+		    
 		    	return level;
 			}
+
 	}

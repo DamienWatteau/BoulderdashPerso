@@ -4,7 +4,7 @@ import boulderdash.model.element.Permeability;
 import boulderdash.model.element.Sprite;
 
 /**
- * <h1>The Class Ditch.</h1>
+ * <h1>The Class Monster2.</h1>
  *
  * @author Jade
  * @version 0.2
@@ -15,7 +15,7 @@ class Monster2 extends MotionlessElement {
     private static final Sprite SPRITE = new Sprite('}', "poule.png");
 
     /**
-     * Instantiates a new ditch.
+     * Instantiates a new monster2.
      */
     Monster2() {
         super(SPRITE, Permeability.BLOCKING);

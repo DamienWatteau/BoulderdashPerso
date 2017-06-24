@@ -4,10 +4,10 @@ import boulderdash.model.element.Permeability;
 import boulderdash.model.element.Sprite;
 
 /**
- * <h1>The Obstacle Class.</h1>
+ * <h1>The Class Monster.</h1>
  *
- * @author Jade
- * @version 0.2
+ * @author Damien Watteau
+ * @version 1.0
  */
 class Monster extends MotionlessElement {
 
@@ -15,7 +15,7 @@ class Monster extends MotionlessElement {
     private static final Sprite SPRITE = new Sprite('^', "Monster.png");
 
     /**
-     * Instantiates a new obstacle.
+     * Instantiates a new monster.
      */
     Monster() {
         super(SPRITE, Permeability.KILLING);

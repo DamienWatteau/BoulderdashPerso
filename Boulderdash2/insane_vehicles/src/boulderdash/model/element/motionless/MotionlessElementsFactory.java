@@ -3,36 +3,36 @@ package boulderdash.model.element.motionless;
 /**
  * <h1>A factory to create MotionlessElements objects.</h1>
  *
- * @author Jade
- * @version 0.3
+ * @author Damien Watteau
+ * @version 1.0
  */
 public abstract class MotionlessElementsFactory {
 
-    /** The Constant ditchRight. */
+    /** The Constant golem. */
     private static final Golem          golem          = new Golem();
 
-    /** The Constant ditchLeft. */
+    /** The Constant diamond. */
     private static final Diamond           diamond           = new Diamond();
 
-    /** The Constant ditchLeftTurnLeft. */
+    /** The Constant end. */
     private static final End   end   = new End();
 
-    /** The Constant ditchLeftTurnRight. */
+    /** The Constant rock. */
     private static final Rock rock = new Rock();
 
-    /** The Constant ditchRightTurnLeft. */
+    /** The Constant monster2. */
     private static final Monster2  monster2  = new Monster2();
 
-    /** The Constant ditchRightTurnRight. */
+    /** The Constant dig. */
     private static final Dig dig = new Dig();
 
-    /** The Constant TREE. */
+    /** The Constant limit. */
     private static final Limit                LIMIT                = new Limit();
 
-    /** The Constant MACADAM. */
+    /** The Constant way. */
     private static final Way             WAY             = new Way();
 
-    /** The Constant OBSTACLE. */
+    /** The Constant monster. */
     private static final Monster            MONSTER            = new Monster();
 
     /**

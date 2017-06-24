@@ -2,8 +2,8 @@
  * This package contains classes to produce MotionLessElement.
  * There is a factory : MotionlessElementsFactory.
  *
- * @author Jade
- * @version 0.3
+ * @author Damien Watteau
+ * @version 1.0
  */
 
 package boulderdash.model.element.motionless;

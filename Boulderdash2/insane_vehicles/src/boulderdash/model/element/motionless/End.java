@@ -4,10 +4,10 @@ import boulderdash.model.element.Permeability;
 import boulderdash.model.element.Sprite;
 
 /**
- * <h1>The Ditch Class.</h1>
+ * <h1>The Class End.</h1>
  *
- * @author Jade
- * @version 0.2
+ * @author Damien Watteau
+ * @version 1.0
  */
 class End extends MotionlessElement {
 
@@ -15,7 +15,7 @@ class End extends MotionlessElement {
     private static final Sprite SPRITE = new Sprite('(', "Door.png");
 
     /**
-     * Instantiates a new ditch.
+     * Instantiates a new end.
      */
     End() {
         super(SPRITE, Permeability.WIN);

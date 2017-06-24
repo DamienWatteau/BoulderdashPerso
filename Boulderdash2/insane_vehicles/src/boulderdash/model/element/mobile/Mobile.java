@@ -23,7 +23,7 @@ abstract class Mobile extends Element implements IMobile {
     /**
      * The x.
      */
-    private Point   position;
+    private Point position;
 
     /** The alive. */
     private Boolean alive = true;
