@@ -20,7 +20,13 @@ public class BoulderDashBDDConnector {
 	    
 	  }
 	   
-	  //Méthode qui va nous retourner notre instance et la créer si elle n'existe pas
+	  
+	  /**
+	   * Méthode qui va nous retourner notre instance et la créer si elle n'existe pas
+	   *
+	   * @return connect
+	   *			connection with the database
+	   */
 	  public static Connection getInstance(){
 		  if(connect == null){
 			  try {
@@ -31,7 +37,8 @@ public class BoulderDashBDDConnector {
 	            try {
 					Class.forName(JDBC_DRIVER);
 				} catch (ClassNotFoundException e) {
-					// TODO Auto-generated catch block
+					
+					// Affiche l'exception et l'etat de la pile d'execution au moment de son appel
 					e.printStackTrace();
 				} 
 	            
@@ -43,7 +50,8 @@ public class BoulderDashBDDConnector {
 				  String passwd = "";
 			      connect = DriverManager.getConnection(url, user, passwd);
 			    } catch (SQLException e) {
-			      e.printStackTrace();
+			    	// Affiche l'exception et l'etat de la pile d'execution au moment de son appel
+			    	e.printStackTrace();
 			    }
 		    System.out.println("INSTANCIATION DE LA CONNEXION SQL ! ");
 		  }

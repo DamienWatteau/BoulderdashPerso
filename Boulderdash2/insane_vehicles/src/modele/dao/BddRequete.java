@@ -14,35 +14,35 @@ import boulderdash.controller.BoulderdashController;
  */
 public class BddRequete {
 	
-	BoulderdashController controller;
-	
-	
+	/**
+	 * User request
+	 *
+	 * @param nom
+	 *			The name of the player
+	 */
 	public void user (String nom){
 
 		try {
-
-	    Statement state = BoulderDashBDDConnector.getInstance().createStatement();
-
-
-	    ResultSet result = state.executeQuery("SELECT * FROM players");
-	    
-	    int ID = 0;
-	    String nomBDD = " ";
-	    int nbrcolumn = 0;
-	    
-	    
-	    result.last();
-	    nbrcolumn = result.getRow();
+			// L'objet Statement permet d'exécuter des instructions SQL (Il interroge la base de donnée et retourne les résultats)
+		    Statement state = BoulderDashBDDConnector.getInstance().createStatement();
 	
-	    // next() récupere la ligne
-	    result.beforeFirst();
+		    // L'objet ResultSet stocke les résultats de Statement (soit les données de la BDD)
+		    ResultSet result = state.executeQuery("SELECT * FROM players");
+		    
+		    int ID = 0;
+		    String nomBDD = " ";
+		    int nbrcolumn = 0;
+		    
+		    
+		    result.last();
+		    nbrcolumn = result.getRow();
+		
+		    result.beforeFirst();
 		    do{
 		    	result.next();
 		    	ID = result.getInt(1);
 		    	nomBDD =result.getString(2);
 		    }while(!(nom.equals(nomBDD)) && (ID != nbrcolumn));
-
-		   //String sql = "{call insert_player("+nom+")}";
 		    
 			if(!nom.equals(nomBDD)){
 				System.out.println("ERROR");
@@ -56,10 +56,20 @@ public class BddRequete {
 			}
 	       
 		  } catch (SQLException e) {
+			  
+			// Affiche l'exception et l'etat de la pile d'execution au moment de son appel
 		    e.printStackTrace();
 		  }
 	}
 	
+	/**
+	 * Request select
+	 *
+	 * @param level
+	 *			The level
+	 * @return map_code
+	 * 				The code of the map
+	 */	
 	public String requestSelect(String level){
 
         try {
@@ -72,6 +82,7 @@ public class BddRequete {
 
             st = BoulderDashBDDConnector.getInstance().createStatement();
             rst = st.executeQuery("SELECT * From maps WHERE map_name = '"+level+"'");
+            
             // Retourne la première ligne
             rst.next();
 

@@ -1,5 +1,7 @@
 package boulderdash.view;
 
+import java.io.IOException;
+
 import javax.swing.JOptionPane;
 
 /**
@@ -10,6 +12,12 @@ import javax.swing.JOptionPane;
  */
 public class Menu {
 	
+		/**
+		 * Menu for the pseudo
+		 *
+		 * @return nom
+		 *            the pseudo of the player
+		 */
 		@SuppressWarnings("static-access")
 		public String menuPseudo(){
 		JOptionPane jop = new JOptionPane();
@@ -19,6 +27,12 @@ public class Menu {
 	    
 		}
 		
+		/**
+		 * Menu for the level
+		 *
+		 * @return level
+		 *            the level
+		 */
 		@SuppressWarnings("static-access")
 		public String menuLevel(){
 			String[] levelname = {"Level 1", "Level 2", "Level 3", "Level 4", "Level 5"};
@@ -33,5 +47,4 @@ public class Menu {
 		    
 		    	return level;
 			}
-
 	}
