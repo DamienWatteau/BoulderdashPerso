@@ -16,7 +16,7 @@ public interface IBoulderdashModel {
      *
      * @return the map
      */
-    IMap getRoad();
+    IMap getMap();
 
     /**
      * Gets the rockford.

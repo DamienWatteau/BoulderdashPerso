@@ -171,7 +171,7 @@ abstract class Mobile extends Element implements IMobile {
      *
      * @param y
      *            the new y, as the road is an infinite loop, there's a modulo
-     *            based on the road height.
+     *            based on the map height.
      */
     public final void setY(final int y) {
         this.getPosition().y = (y + this.getMap().getHeight()) % this.getMap().getHeight();

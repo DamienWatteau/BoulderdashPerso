@@ -45,7 +45,6 @@ public class BoulderDashBDDConnector {
 			    } catch (SQLException e) {
 			      e.printStackTrace();
 			    }
-			  //new BddConnector();
 		    System.out.println("INSTANCIATION DE LA CONNEXION SQL ! ");
 		  }
 		  else{

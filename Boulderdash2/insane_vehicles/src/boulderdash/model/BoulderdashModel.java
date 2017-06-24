@@ -14,45 +14,45 @@ import boulderdash.model.element.mobile.Rockford;
  */
 public class BoulderdashModel implements IBoulderdashModel {
 
-    /** The road. */
-    private IMap   map;
+    /** The map. */
+    private IMap map;
 
-    /** The my vehicle. */
+    /** The rockford. */
     private IMobile rockford;
 
     /**
-     * Instantiates a new insane vehicles model.
+     * Instantiates a new model.
      *
-     * @param fileName
-     *            the file name
+     * @param level
+     *            the level name
      * @param myVehicleStartX
-     *            the my vehicle start X
+     *            the rockford start X
      * @param myVehicleStartY
-     *            the my vehicle start Y
+     *            the rockford start Y
      * @throws IOException
      *             Signals that an I/O exception has occurred.
      */
     public BoulderdashModel(final String level, final int rockfordStartX, final int rockfordStartY)
             throws IOException {
-        this.setRoad(new Map(level));
-        this.setRockford(new Rockford(rockfordStartX, rockfordStartY, this.getRoad()));
+        this.setMap(new Map(level));
+        this.setRockford(new Rockford(rockfordStartX, rockfordStartY, this.getMap()));
     }
 
     /* (non-Javadoc)
      * @see fr.exia.insanevehicles.model.IInsaneVehiclesModel#getRoad()
      */
     @Override
-    public final IMap getRoad() {
+    public final IMap getMap() {
         return this.map;
     }
 
     /**
-     * Sets the road.
+     * Sets the map.
      *
-     * @param road
-     *            the road to set
+     * @param map
+     *            the map to set
      */
-    private void setRoad(final IMap map) {
+    private void setMap(final IMap map) {
         this.map = map;
     }
 
@@ -65,10 +65,10 @@ public class BoulderdashModel implements IBoulderdashModel {
     }
 
     /**
-     * Sets the my vehicle.
+     * Sets the rockford
      *
-     * @param myVehicle
-     *            the myVehicle to set
+     * @param rockford
+     *            the rockford to set
      */
     private void setRockford(final IMobile rockford) {
         this.rockford = rockford;
