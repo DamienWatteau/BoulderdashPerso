@@ -25,9 +25,9 @@ public class BoulderdashModel implements IBoulderdashModel {
      *
      * @param level
      *            the level name
-     * @param myVehicleStartX
+     * @param rockfordStartX
      *            the rockford start X
-     * @param myVehicleStartY
+     * @param rockford StartY
      *            the rockford start Y
      * @throws IOException
      *             Signals that an I/O exception has occurred.

@@ -10,7 +10,7 @@ import boulderdash.model.element.mobile.*;
 import boulderdash.model.element.motionless.MotionlessElementsFactory;
 
 /**
- * <h1>The Class InsaneVehiclesController.</h1>
+ * <h1>The Class BoulderdashController.</h1>
  *
  * @author Damien Watteau
  * @version 1.0

@@ -10,7 +10,7 @@ import boulderdash.view.Menu;
 import modele.dao.BddRequete;
 
 /**
- * <h1>The InsaneVehicles Class.</h1>
+ * <h1>The Main Class.</h1>
  *
  * @author Damien Watteau
  * @version 1.0
