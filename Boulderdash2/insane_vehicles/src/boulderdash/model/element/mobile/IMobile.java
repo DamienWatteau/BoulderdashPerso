@@ -8,7 +8,7 @@ import fr.exia.showboard.IPawn;
 /**
  * <h1>The Interface IMobile.</h1>
  *
- * @author Damien Watteau
+ * @author Damien Watteau, Sophien Gardey
  * @version 1.0
  * @see IPawn
  * @see IElement
@@ -42,7 +42,7 @@ public interface IMobile extends IPawn, IElement {
     void doNothing();
     
     /**
-     * Do nothing.
+     * Do die
      */
     void die();
 
@@ -73,6 +73,7 @@ public interface IMobile extends IPawn, IElement {
      * Checks if the car crashed.
      *
      * @return the boolean
+     * 					0 : There isn't a wall, 1 : There is a wall
      */
     Boolean isCrashed();
     
@@ -80,33 +81,36 @@ public interface IMobile extends IPawn, IElement {
      * Checks if the player won
      *
      * @return the boolean
+     * 					0 : Looser, 1 : Winner
      */
     Boolean isWon();
     
     /**
-     * Check si il y a un loot
+     * Checks if there is a loot
      *
      * @return the boolean
+     * 					0 : There isn't a loot, 1 : There is a loot
      */
     Boolean isLootable();
     
     /**
-     * Check si le joueur est blocked
+     * Checks if the player is blocked
      *
      * @return the boolean
+     * 					
      */
     Boolean isBlocked();
     
     /**
-     * Check si il peut creuser
+     * Checks if he can dig
      *
      * @return the boolean
+     * 					0 : Rockford dig, 1 : Rockford doesn't dig
      */
     Boolean isDesappear();
 
-    /*
-     * (non-Javadoc)
-     * @see fr.exia.showboard.IPawn#getPosition()
+    /**
+     * Get the player position
      */
     @Override
     Point getPosition();

@@ -24,8 +24,6 @@ class Map extends Observable implements IMap {
 
     /** The on the map. */
     private IElement[][] onTheMap;
-    
-//    private final int score = 5;
 
     /**
      * Instantiates a new level.
@@ -43,8 +41,8 @@ class Map extends Observable implements IMap {
     /**
      * Loads file.
      *
-     * @param fileName
-     *            the file name
+     * @param levelname
+     *            the levelname
      * @throws IOException
      *             Signals that an I/O exception has occurred.
      */

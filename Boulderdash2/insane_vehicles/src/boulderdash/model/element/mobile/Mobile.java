@@ -70,9 +70,8 @@ abstract class Mobile extends Element implements IMobile {
         this.setY(y);
     }
 
-    /*
-     * (non-Javadoc)
-     * @see fr.exia.insanevehicles.model.element.mobile.IMobile#moveUp()
+    /**
+     * Move up
      */
     @Override
     public void moveUp() {
@@ -80,9 +79,8 @@ abstract class Mobile extends Element implements IMobile {
         this.setHasMoved();
     }
 
-    /*
-     * (non-Javadoc)
-     * @see fr.exia.insanevehicles.model.element.mobile.IMobile#moveLeft()
+    /**
+     * Move on the left
      */
     @Override
     public void moveLeft() {
@@ -90,9 +88,8 @@ abstract class Mobile extends Element implements IMobile {
         this.setHasMoved();
     }
 
-    /*
-     * (non-Javadoc)
-     * @see fr.exia.insanevehicles.model.element.mobile.IMobile#moveDown()
+    /**
+     * Move down
      */
     @Override
     public void moveDown() {
@@ -109,9 +106,8 @@ abstract class Mobile extends Element implements IMobile {
         }
         
 
-    /*
-     * (non-Javadoc)
-     * @see fr.exia.insanevehicles.model.element.mobile.IMobile#moveRight()
+    /**
+     * Move on the right
      */
     @Override
     public void moveRight() {
@@ -119,9 +115,8 @@ abstract class Mobile extends Element implements IMobile {
         this.setHasMoved();
     }
 
-    /*
-     * (non-Javadoc)
-     * @see fr.exia.insanevehicles.model.element.mobile.IMobile#doNothing()
+    /**
+     * No move
      */
     @Override
     public void doNothing() {
@@ -135,9 +130,10 @@ abstract class Mobile extends Element implements IMobile {
         this.getMap().setMobileHasChanged();
     }
 
-    /*
-     * (non-Javadoc)
-     * @see fr.exia.insanevehicles.model.element.mobile.IMobile#getX()
+    /**
+     * Get the player position
+     * @return x
+     * 			The x position
      */
     @Override
     public final int getX() {
@@ -157,9 +153,12 @@ abstract class Mobile extends Element implements IMobile {
         }
     }
 
-    /*
-     * (non-Javadoc)
-     * @see fr.exia.insanevehicles.model.element.mobile.IMobile#getY()
+    /**
+     * Get the player's position in X
+     * 
+     * @return y
+     * 		  	The y position
+     * 
      */
     @Override
     public final int getY() {
@@ -199,9 +198,10 @@ abstract class Mobile extends Element implements IMobile {
         this.map = map;
     }
 
-    /*
-     * (non-Javadoc)
-     * @see fr.exia.insanevehicles.model.element.mobile.IMobile#isAlive()
+    /**
+     * Check if rockford is alive
+     * @return boolean
+     *				 				
      */
     @Override
     public Boolean isAlive() {
@@ -216,38 +216,62 @@ abstract class Mobile extends Element implements IMobile {
         this.setHasMoved();
     }
 
-    /*
-     * (non-Javadoc)
-     * @see fr.exia.insanevehicles.model.element.mobile.IMobile#isCrashed()
+    /**
+     * Check if rockford crashed
+     * @return boolean
+     * 				0 : Alive, 1 : Dead
+     * 
      */
     @Override
     public Boolean isCrashed() {
         return this.getMap().getOnTheMapXY(this.getX(), this.getY()).getPermeability() == Permeability.KILLING;
     }
     
+    /**
+     * Checks if the player won
+     * @return boolean
+     * 				0 : Looser, 1 : Winner	
+     * 
+     */
     public Boolean isWon() {
         return this.getMap().getOnTheMapXY(this.getX(), this.getY()).getPermeability() == Permeability.WIN;
     }
     
+    /**
+     * Checks if the player is blocked
+     * 
+     * @return boolean
+     * 				0 : There isn't a wall, 1 : There is a wall
+     */
     public Boolean isBlocked() {
         return this.getMap().getOnTheMapXY(this.getX(), this.getY()).getPermeability() == Permeability.BLOCKING;
     }
+    
+    /**
+     * Checks if there is a loot
+     * 
+     * @return boolean
+     * 				0 : There isn't a loot, 1 : There is a loot
+     */
     public Boolean isLootable() {
         return this.getMap().getOnTheMapXY(this.getX(), this.getY()).getPermeability() == Permeability.LOOTABLE;
     }
+    
+    /**
+     * Checks if he can dig
+     * 
+     * @return boolean
+     * 				0 : Rockford dig, 1 : Rockford doesn't dig
+     */
     public Boolean isDesappear() {
         return this.getMap().getOnTheMapXY(this.getX(), this.getY()).getPermeability() == Permeability.DISAPPEAR;
     }
     
-    
-    
-    /*
-     * (non-Javadoc)
-     * @see fr.exia.showboard.IPawn#getPosition()
-     */
-    /*
-     * (non-Javadoc)
-     * @see fr.exia.insanevehicles.model.element.mobile.IMobile#getPosition()
+    /**
+     * Get the player position
+     * 
+     * @return position
+     * 				the position to get
      */
     @Override
     public Point getPosition() {

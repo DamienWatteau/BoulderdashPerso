@@ -54,9 +54,8 @@ public class Rockford extends Mobile {
         spriteDown.loadImage();
     }
 
-    /*
-     * (non-Javadoc)
-     * @see fr.exia.insanevehicles.model.element.mobile.Mobile#moveLeft()
+    /**
+     * Move on the left
      */
     @Override
     public final void moveLeft() {
@@ -64,9 +63,8 @@ public class Rockford extends Mobile {
         this.setSprite(spriteTurnLeft);
     }
 
-    /*
-     * (non-Javadoc)
-     * @see fr.exia.insanevehicles.model.element.mobile.Mobile#moveRight()
+    /**
+     * Move on the right
      */
     @Override
     public final void moveRight() {
@@ -74,19 +72,24 @@ public class Rockford extends Mobile {
         this.setSprite(spriteTurnRight);
     }
     
+    /**
+     * Move up
+     */
     public final void moveUp() {
         super.moveUp();
         this.setSprite(spriteUp);
     }
     
+    /**
+     * Move down
+     */
     public final void moveDown() {
         super.moveDown();
         this.setSprite(spriteDown);
     }
 
-    /*
-     * (non-Javadoc)
-     * @see fr.exia.insanevehicles.model.element.mobile.Mobile#die()
+    /**
+     * Dies
      */
     @Override
     public final void die() {
@@ -94,9 +97,8 @@ public class Rockford extends Mobile {
         this.setSprite(spriteDie);
     }
 
-    /*
-     * (non-Javadoc)
-     * @see fr.exia.insanevehicles.model.element.mobile.Mobile#doNothing()
+    /**
+     * No move
      */
     @Override
     public final void doNothing() {
