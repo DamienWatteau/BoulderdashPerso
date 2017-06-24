@@ -28,9 +28,6 @@ public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView 
 	/** The Constant roadView. */
 	private static final int roadView = 25;
 
-//	/** The Constant squareSize. */
-//	private static final int squareSize = 30;
-
 	/** The Constant closeView. */
 	private Rectangle closeView;
 
@@ -109,8 +106,7 @@ public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView 
 		this.followMyVehicle();
 
 		boardFrame.setVisible(true);
-		
-		
+			
 	}
 
 	/**

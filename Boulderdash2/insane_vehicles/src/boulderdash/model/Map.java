@@ -69,7 +69,6 @@ class Map extends Observable implements IMap {
             }
 
         }
-        //System.out.println("fini");
     }
 
     /*
@@ -120,7 +119,7 @@ class Map extends Observable implements IMap {
     }
 
     /**
-     * Sets the on the road XY.
+     * Sets the on the map XY.
      *
      * @param element
      *            the element
