@@ -33,9 +33,9 @@ public abstract class Element implements IElement {
         this.setPermeability(permeability);
     }
 
-    /*
-     * (non-Javadoc)
-     * @see fr.exia.insanevehicles.model.element.IElement#getSprite()
+    /**
+     * Get Sprite
+     * @return sprite
      */
     @Override
     public final Sprite getSprite() {
@@ -51,10 +51,12 @@ public abstract class Element implements IElement {
     public final void setSprite(final Sprite sprite) {
         this.sprite = sprite;
     }
-
-    /*
-     * (non-Javadoc)
-     * @see fr.exia.insanevehicles.model.element.IElement#getPermeability()
+    
+    
+    /**
+     * Get the permeability of the block.
+     *
+     * @return permeability
      */
     @Override
     public final Permeability getPermeability() {
@@ -71,13 +73,10 @@ public abstract class Element implements IElement {
         this.permeability = permeability;
     }
 
-    /*
-     * (non-Javadoc)
-     * @see fr.exia.showboard.ISquare#getImage()
-     */
-    /*
-     * (non-Javadoc)
-     * @see fr.exia.insanevehicles.model.element.IElement#getImage()
+    /**
+     * Get image
+     *
+     * @return image
      */
     @Override
     public final Image getImage() {

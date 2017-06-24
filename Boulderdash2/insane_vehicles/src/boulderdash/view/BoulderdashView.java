@@ -62,12 +62,10 @@ public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView 
 		SwingUtilities.invokeLater(this);
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see
-	 * fr.exia.insanevehicles.view.IInsaneVehiclesView#displayMessage(java.lang.
-	 * String)
+	/**
+	 * Display message.
+	 * @param message
+	 * 				the message
 	 */
 	@Override
 	public final void displayMessage(final String message) {
@@ -75,8 +73,7 @@ public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView 
 	}
 	
 	/**
-	 * create a window of name BoulderDash
-	 * 	
+	 * Create the game window
 	 */
 	@Override
 	public final void run() {
@@ -159,20 +156,20 @@ public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView 
 		return userOrder;
 	}
 
-	/*
-	 * (non-Javadoc)
+	/**
+	 * KeyTyped
 	 * 
-	 * @see java.awt.event.KeyListener#keyTyped(java.awt.event.KeyEvent)
+	 * @param keyEvent
 	 */
 	@Override
 	public void keyTyped(final KeyEvent keyEvent) {
 		// Nop
 	}
 
-	/*
-	 * (non-Javadoc)
+	/**
+	 * KeyPressed
 	 * 
-	 * @see java.awt.event.KeyListener#keyPressed(java.awt.event.KeyEvent)
+	 * @param keyEvent
 	 */
 	@Override
 	public final void keyPressed(final KeyEvent keyEvent) {
@@ -183,20 +180,18 @@ public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView 
 		}
 	}
 
-	/*
-	 * (non-Javadoc)
+	/**
+	 * KeyReleased
 	 * 
-	 * @see java.awt.event.KeyListener#keyReleased(java.awt.event.KeyEvent)
+	 * @param keyEvent
 	 */
 	@Override
 	public void keyReleased(final KeyEvent keyEvent) {
 		// Nop
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see fr.exia.insanevehicles.view.IInsaneVehiclesView#followMyvehicle()
+	/**
+	 * Rockford position screen
 	 */
 	@Override
 	public final void followRockford() {

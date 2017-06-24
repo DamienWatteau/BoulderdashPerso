@@ -38,8 +38,11 @@ public class BoulderdashModel implements IBoulderdashModel {
         this.setRockford(new Rockford(rockfordStartX, rockfordStartY, this.getMap()));
     }
 
-    /* (non-Javadoc)
-     * @see fr.exia.insanevehicles.model.IInsaneVehiclesModel#getRoad()
+    /**
+     * Get the map
+     * 
+     * @return map
+     * 			the map
      */
     @Override
     public final IMap getMap() {
@@ -56,8 +59,10 @@ public class BoulderdashModel implements IBoulderdashModel {
         this.map = map;
     }
 
-    /* (non-Javadoc)
-     * @see fr.exia.insanevehicles.model.IInsaneVehiclesModel#getMyVehicle()
+    /**
+     * Get the Rockford
+     * 
+     * @return rockford
      */
     @Override
     public final IMobile getMyRockford() {
@@ -73,5 +78,4 @@ public class BoulderdashModel implements IBoulderdashModel {
     private void setRockford(final IMobile rockford) {
         this.rockford = rockford;
     }
-
 }

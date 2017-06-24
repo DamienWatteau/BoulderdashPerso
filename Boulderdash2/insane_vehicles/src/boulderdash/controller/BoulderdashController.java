@@ -46,10 +46,8 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
 		this.clearStackOrder();
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see fr.exia.insanevehicles.controller.IIinsaneVehiclesController#play()
+	/**
+	 * Execute the game
 	 */
 	@Override
 	public final void play() throws InterruptedException {
@@ -140,19 +138,11 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
 
 	}
 
-	/*
-	 * (non-Javadoc)
+	/**
+	 * Order
 	 * 
-	 * @see
-	 * fr.exia.insanevehicles.controller.IOrderPerformed#orderPerform(fr.exia.
-	 * insanevehicles. controller.UserOrder)
-	 */
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see
-	 * fr.exia.insanevehicles.controller.IIinsaneVehiclesController#orderPerform
-	 * (fr.exia. insanevehicles.controller.UserOrder)
+	 * @param userOrder
+	 *            the order
 	 */
 	@Override
 	public final void orderPerform(final UserOrder userOrder) throws IOException {
@@ -181,7 +171,8 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
 	/**
 	 * Gets the model.
 	 *
-	 * @return the model
+	 * @return model
+	 * 			   the model
 	 */
 	private IBoulderdashModel getModel() {
 		return this.model;
@@ -223,11 +214,11 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
 		this.stackOrder = UserOrder.NOP;
 	}
 
-	/*
-	 * (non-Javadoc)
+	/**
+	 * Order
 	 * 
-	 * @see fr.exia.insanevehicles.controller.IIinsaneVehiclesController#
-	 * getOrderPeformer()
+	 * @return order
+	 *            the order
 	 */
 	@Override
 	public IOrderPerformer getOrderPeformer() {

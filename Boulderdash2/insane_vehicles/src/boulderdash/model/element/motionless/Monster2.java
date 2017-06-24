@@ -6,8 +6,8 @@ import boulderdash.model.element.Sprite;
 /**
  * <h1>The Class Monster2.</h1>
  *
- * @author Jade
- * @version 0.2
+ * @author Damien Watteau
+ * @version 1.0
  */
 class Monster2 extends MotionlessElement {
 

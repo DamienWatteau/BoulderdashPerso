@@ -69,9 +69,10 @@ class Map extends Observable implements IMap {
         }
     }
 
-    /*
-     * (non-Javadoc)
-     * @see fr.exia.insanevehicles.model.IRoad#getWidth()
+    /**
+     * Get the width
+     * 
+     * @return width
      */
     @Override
     public final int getWidth() {
@@ -88,9 +89,10 @@ class Map extends Observable implements IMap {
         this.width = width;
     }
 
-    /*
-     * (non-Javadoc)
-     * @see fr.exia.insanevehicles.model.IRoad#getHeight()
+    /**
+     * Get the Height
+     *
+     * @return heigh
      */
     @Override
     public final int getHeight() {
@@ -107,9 +109,15 @@ class Map extends Observable implements IMap {
         this.height = height;
     }
 
-    /*
-     * (non-Javadoc)
-     * @see fr.exia.insanevehicles.model.IRoad#getOnTheRoadXY(int, int)
+    /**
+     * Get the map
+     * 
+     * @param x
+     * 			The x
+     * @param y
+     * 			The y
+     * 
+     * @return OnTheMap[][]
      */
     @Override
     public final IElement getOnTheMapXY(final int x, final int y) {
@@ -130,20 +138,12 @@ class Map extends Observable implements IMap {
         this.onTheMap[x][y] = element;
     }
 
-    /*
-     * (non-Javadoc)
-     * @see fr.exia.insanevehicles.model.IRoad#setMobileHasChanged()
-     */
     @Override
     public final void setMobileHasChanged() {
         this.setChanged();
         this.notifyObservers();
     }
 
-    /*
-     * (non-Javadoc)
-     * @see fr.exia.insanevehicles.model.IRoad#getObservable()
-     */
     @Override
     public Observable getObservable() {
         return this;

@@ -28,13 +28,20 @@ public interface IElement extends ISquare {
      */
     Permeability getPermeability();
 
-    /*
-     * (non-Javadoc)
-     * @see fr.exia.showboard.ISquare#getImage()
+    /**
+     * Get image
+     *
+     * @return image
      */
     @Override
     Image getImage();
     
+    /**
+     * Sets the sprite.
+     *
+     * @param sprite
+     *            the new sprite
+     */
     void setSprite(final Sprite sprite);
 
 }

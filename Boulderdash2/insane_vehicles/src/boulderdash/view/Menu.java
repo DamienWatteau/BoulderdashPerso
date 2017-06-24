@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
  * @version 1.0
  */
 public class Menu {
-
+	
 		@SuppressWarnings("static-access")
 		public String menuPseudo(){
 		JOptionPane jop = new JOptionPane();
