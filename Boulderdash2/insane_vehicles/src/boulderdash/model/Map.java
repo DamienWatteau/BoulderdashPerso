@@ -39,7 +39,7 @@ class Map extends Observable implements IMap {
     }
 
     /**
-     * Loads file.
+     * Loads map.
      *
      * @param levelname
      *            the levelname

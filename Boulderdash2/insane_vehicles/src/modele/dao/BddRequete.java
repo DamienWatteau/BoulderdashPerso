@@ -23,16 +23,15 @@ public class BddRequete {
 	public void user (String nom){
 
 		try {
-			// L'objet Statement permet d'exécuter des instructions SQL (Il interroge la base de donnée et retourne les résultats)
+			// The Statement object execute SQL instructions (it asks the database and it returns results)
 		    Statement state = BoulderDashBDDConnector.getInstance().createStatement();
 	
-		    // L'objet ResultSet stocke les résultats de Statement (soit les données de la BDD)
+		    // The ResultSet object store Statement results (datas of the database)
 		    ResultSet result = state.executeQuery("SELECT * FROM players");
 		    
 		    int ID = 0;
 		    String nomBDD = " ";
 		    int nbrcolumn = 0;
-		    
 		    
 		    result.last();
 		    nbrcolumn = result.getRow();
@@ -57,7 +56,7 @@ public class BddRequete {
 	       
 		  } catch (SQLException e) {
 			  
-			// Affiche l'exception et l'etat de la pile d'execution au moment de son appel
+			// Show the exeption and the execution stack status at the moment of his call
 		    e.printStackTrace();
 		  }
 	}
@@ -74,24 +73,24 @@ public class BddRequete {
 
         try {
 
-            // L'objet Statement permet d'exécuter des instructions SQL (Il interroge la base de donnée et retourne les résultats)
+        	// The Statement object execute SQL instructions (it asks the database and it returns results)
             Statement st; 
 
-            // L'objet ResultSet stocke les résultats de Statement (soit les données de la BDD)
+            // The ResultSet object store Statement results (datas of the database)
             ResultSet rst;
 
             st = BoulderDashBDDConnector.getInstance().createStatement();
             rst = st.executeQuery("SELECT * From maps WHERE map_name = '"+level+"'");
             
-            // Retourne la première ligne
+            // Return the first line
             rst.next();
 
-                // Retourne le code de la map provenant de la base de donnée
+            	// Return the map code from the database
                 return rst.getString("map_code"); 
 
         } catch (Exception ex) {
 
-            // Affiche l'exception et l'etat de la pile d'execution au moment de son appel
+        	// Show the exeption and the execution stack status at the moment of his call
             ex.printStackTrace(); 
           }
 

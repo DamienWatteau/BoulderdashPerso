@@ -41,10 +41,10 @@ public abstract class Main {
 		BddRequete requete = new BddRequete();
 		String level;
 		
-		// Inscrit le joueur dans la base de donnée
+		// Register the player in the database
 		requete.user(menu.menuPseudo());
 		
-		// Recupere le choix du niveau
+		// Recovers the choice of level
   	   	level = menu.menuLevel();
 
 		final IBoulderdashModel model = new BoulderdashModel(level, startX, startY);
